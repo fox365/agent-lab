@@ -1,0 +1,52 @@
+# Standalone PROJECT_CONFIG template extracted from prompts/orchestrator.md.
+# Replace all <TEMP_...> placeholders during Phase 0 before running any API calls.
+
+PROJECT_CONFIG:
+  # 1. Event / Campaign Identity
+  project_name: "<TEMP_PROJECT_NAME: Acme Holiday Makers Market 2026>"
+  campaign_slug: "<TEMP_CAMPAIGN_SLUG: acme_market_2026>"
+  timezone: "<TEMP_TIMEZONE: America/Los_Angeles>"
+  event_start_iso: "<TEMP_EVENT_START: 2026-11-14T10:00:00-0800>"
+  event_end_iso: "<TEMP_EVENT_END: 2026-11-15T15:00:00-0800>"
+  ads_cutoff_iso: "<TEMP_ADS_CUTOFF: 2026-11-15T13:30:00-0800>" # 90 min before event close
+  venue_name: "<TEMP_VENUE_NAME: Acme Community Hall>"
+  venue_address: "<TEMP_VENUE_ADDRESS: 123 Main St, YourCity, WA 98000>"
+  venue_lat: 47.46401        # <TEMP_LATITUDE>
+  venue_lon: -122.00095      # <TEMP_LONGITUDE>
+  initial_radius_miles: 10   # <TEMP_INITIAL_RADIUS_MILES>
+  expanded_radius_miles: 20  # <TEMP_FINAL_DAY_EXPANDED_RADIUS_MILES>
+
+  # 2. Website & Hosting Mirrors
+  live_site_url: "<TEMP_LIVE_SITE_URL: https://example-market.com/>"
+  hosted_assets_base_url: "<TEMP_ASSETS_BASE_URL: https://example-market.com/marketing-2026/assets>"
+  workspace_root: "<TEMP_WORKSPACE_ROOT: D:\\MarketingProject-dev>"
+  prod_www_dir: "prod-www"
+  mirror_www_dir: "drive-www" # Secondary sync folder (or omit if single folder)
+  photo_drop_posts_dir: "posts"
+  photo_drop_story_dir: "story"
+
+  # 3. Lineup / Roster Source of Truth (Synced with prod-www/index.html)
+  active_featured_count: 13  # <TEMP_ACTIVE_COUNT: e.g., 13 local makers + featured beverage partner>
+  featured_partner_handle: "<TEMP_PARTNER_HANDLE: @examplecoffee>"
+  day2_only_participants:    # <TEMP_SPECIAL_SCHEDULE_VENDORS>
+    - "<TEMP_VENDOR_SUN_1: Artisan A (Sunday Only)>"
+    - "<TEMP_VENDOR_SUN_2: Artisan B (Sunday Only)>"
+  removed_or_cancelled_entities: # <TEMP_REMOVED_LIST: Never mention in site, ads, or social>
+    - "<TEMP_CANCELLED_1: Cancelled Food Truck>"
+    - "<TEMP_CANCELLED_2: Former Vendor Name>"
+
+  # 4. Budget & Bid Governance
+  hard_spend_cap_usd: 50.00  # <TEMP_HARD_CAP_USD: $50.00 = 5000 cents — NEVER exceed without explicit user sign-off>
+  initial_awareness_budget_usd: 25.00
+  initial_traffic_budget_usd: 25.00
+
+  # 5. Credentials & IDs (Stored ONLY in <workspace_root>/.env — NEVER print secret values)
+  env_vars:
+    META_ACCESS_TOKEN: "<TEMP_IN_DOTENV>"
+    META_AD_ACCOUNT_ID: "<TEMP_AD_ACCOUNT_ID: act_000000000000000>"
+    FB_PAGE_ID: "<TEMP_FB_PAGE_ID: 000000000000000>"
+    IG_USER_ID: "<TEMP_IG_USER_ID: 17841400000000000>"
+    GA4_PROPERTY_ID: "<TEMP_GA4_PROPERTY_ID: 000000000>"
+    GA4_MEASUREMENT_ID: "<TEMP_GA4_MEASUREMENT_ID: G-XXXXXXXXXX>"
+    GOOGLE_APPLICATION_CREDENTIALS: "<TEMP_GA4_JSON_PATH: .ga4-service-account.json>"
+    FOOT_TRAFFIC_SHEET_ID: "<TEMP_GOOGLE_SHEET_ID: 1AbCdEfGhIjKlMnOpQrStUvWxYz>"
