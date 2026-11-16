@@ -5,6 +5,9 @@ You are setting up, executing, and maintaining an end-to-end, agent-driven local
 > **IMPORTANT — TEMPORARY TEMPLATE VALUES (`<TEMP_...>`):**
 > Every project-specific name, URL, ID, coordinate, date, vendor/product name, and budget in this prompt is a **TEMPORARY PLACEHOLDER**.
 > **DO NOT** run live API calls with placeholder values. Start in **Phase 0** by inspecting the workspace and interviewing me to replace all `<TEMP_...>` values with my real project configuration.
+>
+> **COMPANION SUB-AGENT & WORKSPACE TEMPLATES:**
+> Modular sub-agent prompts extracted for this workflow live in [`subagents/`](./subagents/README.md) (`maintainer.md`, `media-pipeline.md`, `organic-social-publisher.md`, `ads-manager-browser.md`), and starter workspace files live in [`../workspace/`](../workspace/).
 
 ---
 
